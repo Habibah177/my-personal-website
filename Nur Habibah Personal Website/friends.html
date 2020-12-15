@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>My Friends</title>
+<style>
+a:link {
+  color: #664d00;
+  background-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+a:visited {
+ color: #669900;
+ text-decoration-line: underline;
+ text-decoration-style: solid;
+}
+
+a:hover {
+ color: #666699;
+ background-color: transparent;
+ text-decoration: none;
+}
+</style>
+<br>
+</head>
+<body bgcolor="#CCCCFF">
+<center><a href="aboutme.html">Biodata</a></center>
+<center><a href="myfamily.html">My Family</a></center>
+<br>
+<center><font color="#143252"><h1>MY FRIENDS<h1></font></center>
+<br>
+<style>
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center"><font color="#143252">SCHOOL & UNIVERSITY FRIENDS</font></h2>
+
+<center><p>School Friends:</p></center>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="images/schoolfriend1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="images/schoolfriend2.png" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="images/schoolfriend3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="images/schoolfriend4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="images/schoolfriend5.png" style="width:100%">
+  </div>
+
+<div class="mySlides1">
+    <img src="images/schoolfriend6.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<center><p>University Friends:</p></center>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="images/unifriend1.png" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="images/unifriend2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="images/unifriend3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="images/unifriend4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="images/unifriend5.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+<br>
+<br>
+<table align="center">
+<tr align="center">
+<td><img src="images/dots.gif"></td>
+<td><img src="images/dots.gif"></td>
+<td><img src="images/dots.gif"></td>
+<td><img src="images/dots.gif"></td>
+</tr>
+</table>
+</body>
+</html> 

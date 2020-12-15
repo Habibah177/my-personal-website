@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>HOME</title>
+</head>
+<body bgcolor="#E6DCC6">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Number text (1/2 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 5.5s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5.5s;
+  animation-name: fade;
+  animation-duration: 5.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class=""numbertext""></div>
+  <img src="images/header1.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="images/header2.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<br>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+</style>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #800040;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #800040;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+<br>
+<table align="center">
+<tr align="center">
+<td>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">About Me
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="aboutme.html">Biodata & Education</a>
+      <a href="experience.html">My Memorable Experience</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Family
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="myfamily.html">My Family</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Friends
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="friends.html">My Friends</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Gallery
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="gallery.html">My Gallery</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Favourite Entertainment
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="music.html">My Favourite Music</a>
+      <a href="movie.html">My Favourite Show</a>
+    </div>
+  </div>
+</div>
+</td>
+</tr>
+</table>
+<body>
+<br>
+<center><iframe src="http://free.timeanddate.com/clock/i7l5tsil/n2218/szw110/szh110/hbw11/hfc111/cf100/hgr0/fav0/fiv0/mqcfff/mql15/mqw4/mqd94/mhcfff/mhl15/mhw4/mhd94/mmv0/hhcbbb/hmcddd/hsceee" frameborder="0" width="110" height="110"></iframe></center>
+<br>
+<center><h1>Welcome to My Personal Website</h1></center>
+<center><img src="images/handwave.gif"></center>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<center><p><b><font size="3"><font color="#2F2011">HELLO,</font></b></p></center>
+<center><p><b><font size="3"><font color="#2F2011">I am Nur Habibah Binti Mazlan from UiTM Kedah, student in Diploma of Information Management</font></b></p></center>
+<center><p><b><font size="3"><font color="#2F2011">This personal website is for informative and entertainment purpose</font></b></p></center>
+<center><p><b><font size="3"><font color="#2F2011">ENJOY!</font></b></p></center>
+<table align="center" cellspacing="18" width="200" height="100">
+<tr align="center">
+<td><img src="images/homeone.png"></td>
+<td><img src="images/hometwo.png"></td>
+<td><img src="images/homethree.png"></td>
+</tr>
+</table>
+<br>
+<div id="sfc3u6jmxguaszrflgkqdpham8wklamjttu"></div>
+<div id="sfcejmcjax1u6bpj1117d5r7696fuym4q99"></div>
+<center><script type="text/javascript"><img src="https://counter8.stat.ovh/private/counter.js?c=ejmcjax1u6bpj1117d5r7696fuym4q99&down=async" async></script>
+<noscript><a href="https://www.freecounterstat.com" title="free stat counter"><img src="https://counter8.stat.ovh/private/freecounterstat.php?c=ejmcjax1u6bpj1117d5r7696fuym4q99" border="0" title="free stat counter" alt="free stat counter"></a></noscript>
+<a href="https://www.freecounterstat.com" title="free stat counter"><img src="https://counter8.stat.ovh/private/freecounterstat.php?c=ejmcjax1u6bpj1117d5r7696fuym4q99" border="0" title="free stat counter" alt="free stat counter"></a></center>
+<br>
+<embed src="audio/furelise.mp3" hidden="true" autoplay="true"></embed>
+</body>
+</html>
